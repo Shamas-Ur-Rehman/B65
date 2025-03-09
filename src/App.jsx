@@ -1,24 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import "primereact/resources/themes/lara-light-blue/theme.css"; // Choose a theme
-import "primereact/resources/primereact.min.css"; // Core styles
-import "primeicons/primeicons.css"; // Icons
-import MyComponent from './components/MyComponent';
+import 'primereact/resources/themes/lara-light-blue/theme.css'
+import 'primereact/resources/primereact.min.css'
+import 'primeicons/primeicons.css'
+import RouteConfig from './router/RouteConfig'
+import AuthLayout from './layouts/AuthLayout'
 
-
-function App() {
-  const [count, setCount] = useState(0)
-
+function App () {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-      <MyComponent />
+      <RouteConfig />
     </>
-
   )
 }
 
