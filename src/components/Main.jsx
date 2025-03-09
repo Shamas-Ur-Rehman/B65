@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 
 function Main () {
   const [isOpen, setIsOpen] = useState(false)
-
+  const navigate = useNavigate()
   return (
     <div className='bg-gray-100 h-screen relative overflow-hidden'>
       <div className='container mx-auto px-4 relative'>
@@ -103,7 +104,12 @@ function Main () {
               <button className='bg-[#3C6E71] font-verdana  text-white px-12 py-1 rounded-full text-[22px]'>
                 Sign Up
               </button>
-              <button className='bg-[#284B63] font-verdana  text-white px-12 py-1 rounded-full text-[22px]'>
+              <button
+                onClick={() => {
+                  navigate('/login')
+                }}
+                className='bg-[#284B63] font-verdana  text-white px-12 py-1 rounded-full text-[22px]'
+              >
                 Login
               </button>
             </div>
